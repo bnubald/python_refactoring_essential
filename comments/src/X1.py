@@ -1,7 +1,7 @@
 class X1:
 
     @staticmethod
-    def m(lower_bound, upper_bound):
+    def sum_of_squares(lower_bound, upper_bound):
         accumulated_sum = 0
 
         for i in range(lower_bound, upper_bound + 1):
