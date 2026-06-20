@@ -6,12 +6,11 @@ class X1:
 
         for i in range(lower_bound, upper_bound + 1):
             # Add square of each number in the range
-            p += X1.n(i)
+            p += X1.square(i)
 
         # Return accumulated sum
         return p
 
     @staticmethod
-    def n(k):
-        # Return square of input
+    def square(k):
         return k * k
