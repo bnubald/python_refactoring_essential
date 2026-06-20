@@ -59,5 +59,12 @@ class Order:
 
     def _subtotal(self):
         subtotal = sum(item.price * item.quantity for item in self.items)
-
         return subtotal
+
+    def _calculate_discount(self):
+        discount = 0.0
+        if self.customer.is_loyal():
+            discount = subtotal * 0.10
+        elif subtotal > 100:
+            discount = subtotal * 0.05
+
