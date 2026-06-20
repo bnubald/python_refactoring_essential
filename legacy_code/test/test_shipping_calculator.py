@@ -17,5 +17,11 @@ class MyTestCase(unittest.TestCase):
         result = shipping_calculator.calculate_shipping(1002)
         assert result == 36.8
 
+    def test_order_1003(self):
+        shipping_calculator = ShippingCalculator()
+        result = shipping_calculator.calculate_shipping(1003)
+        assert result == 27.4
+
+
 if __name__ == '__main__':
     unittest.main()
