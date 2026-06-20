@@ -66,3 +66,8 @@ class Order:
 
         return discount
 
+    def _calculate_tax(self, subtotal, discount):
+        taxable_amount = subtotal - discount
+        tax = taxable_amount * 0.20
+        return tax
+
