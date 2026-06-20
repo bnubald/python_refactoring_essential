@@ -32,6 +32,11 @@ class OrderService:
 
 class ShippingCalculator:
 
+    order_service: OrderService
+
+    def __init__(self):
+        self.order_service = OrderService()
+
     def calculate_shipping(self, order_id: int) -> float:
         try:
             order = self.get_order(order_id)
