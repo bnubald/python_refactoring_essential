@@ -31,7 +31,7 @@ class Order:
 
     def summarise(self) -> OrderSummary:
         # Validation
-        self.validate_items()
+        self._validate_items()
 
         # Subtotal calculation
         subtotal = sum(item.price * item.quantity for item in self.items)
@@ -52,7 +52,7 @@ class Order:
 
         return OrderSummary(subtotal, discount, tax, total)
 
-    def validate_items(self):
+    def _validate_items(self):
         if self.items is None:
             raise ValueError("Items cannot be None")
         if len(self.items) == 0:
