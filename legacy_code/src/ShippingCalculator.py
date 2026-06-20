@@ -39,7 +39,7 @@ class ShippingCalculator:
 
     def calculate_shipping(self, order_id: int) -> float:
         try:
-            order = self.get_order(order_id)
+            order = self.order_service.get_order(order_id)
 
             if order.shippingType == "STANDARD":
                 return order.weightKg * 0.5
