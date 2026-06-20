@@ -33,7 +33,6 @@ class Order:
         # Validation
         self._validate_items()
 
-        # Subtotal calculation
         subtotal = sum(item.price * item.quantity for item in self.items)
 
         # Discount rules
@@ -57,3 +56,6 @@ class Order:
             raise ValueError("Items cannot be None")
         if len(self.items) == 0:
             raise ValueError("Order must contain items")
+
+    def _subtotal(self):
+        subtotal = sum(item.price * item.quantity for item in self.items)
