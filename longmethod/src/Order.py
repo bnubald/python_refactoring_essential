@@ -33,7 +33,7 @@ class Order:
         # Validation
         self._validate_items()
 
-        subtotal = sum(item.price * item.quantity for item in self.items)
+        subtotal = self._subtotal()
 
         # Discount rules
         discount = 0.0
@@ -59,3 +59,5 @@ class Order:
 
     def _subtotal(self):
         subtotal = sum(item.price * item.quantity for item in self.items)
+
+        return subtotal
