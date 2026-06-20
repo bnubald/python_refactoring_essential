@@ -5,19 +5,19 @@ from comments.src.SquareCalculator import SquareCalculator
 
 class TestSquareCalculator(unittest.TestCase):
 
-    def test_m_single_value(self):
+    def test_sum_of_squares_single_value(self):
         self.assertEqual(SquareCalculator.sum_of_squares(3, 3), 9)
 
-    def test_m_small_range(self):
+    def test_sum_of_squares_small_range(self):
         self.assertEqual(SquareCalculator.sum_of_squares(1, 3), 14)
 
-    def test_m_larger_range(self):
+    def test_sum_of_squares_larger_range(self):
         self.assertEqual(SquareCalculator.sum_of_squares(0, 3), 14)
 
-    def test_m_negative_range(self):
+    def test_sum_of_squares_negative_range(self):
         self.assertEqual(SquareCalculator.sum_of_squares(-2, 0), 5)
 
-    def test_m_larger_negative_to_positive(self):
+    def test_sum_of_squares_larger_negative_to_positive(self):
         self.assertEqual(SquareCalculator.sum_of_squares(-1, 1), 2)
 
 
