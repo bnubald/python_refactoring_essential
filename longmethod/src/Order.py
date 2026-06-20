@@ -67,3 +67,6 @@ class Order:
         tax = taxable_amount * 0.20
         return taxable_amount, tax
 
+    def _calculate_total(self, taxable_amount, tax):
+        total = taxable_amount + tax
+        return total
