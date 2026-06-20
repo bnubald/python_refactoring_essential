@@ -5,10 +5,7 @@ class SquareCalculator:
         accumulated_sum = 0
 
         for i in range(lower_bound, upper_bound + 1):
-            accumulated_sum += SquareCalculator.square(i)
+            accumulated_sum += i * i
 
         return accumulated_sum
 
-    @staticmethod
-    def square(value):
-        return value * value
