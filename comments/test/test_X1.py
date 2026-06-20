@@ -3,7 +3,7 @@ import unittest
 from comments.src.SquareCalculator import SquareCalculator
 
 
-class TestX1(unittest.TestCase):
+class TestSquareCalculator(unittest.TestCase):
 
     def test_n_basic(self):
         self.assertEqual(SquareCalculator.square(0), 0)
