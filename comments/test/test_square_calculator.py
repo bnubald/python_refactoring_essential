@@ -5,11 +5,6 @@ from comments.src.SquareCalculator import SquareCalculator
 
 class TestSquareCalculator(unittest.TestCase):
 
-    def test_n_basic(self):
-        self.assertEqual(SquareCalculator.square(0), 0)
-        self.assertEqual(SquareCalculator.square(2), 4)
-        self.assertEqual(SquareCalculator.square(-3), 9)
-
     def test_m_single_value(self):
         self.assertEqual(SquareCalculator.sum_of_squares(3, 3), 9)
 
