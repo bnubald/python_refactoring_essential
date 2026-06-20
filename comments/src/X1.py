@@ -12,5 +12,5 @@ class X1:
         return p
 
     @staticmethod
-    def square(k):
-        return k * k
+    def square(value):
+        return value * value
