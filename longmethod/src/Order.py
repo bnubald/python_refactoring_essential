@@ -35,12 +35,9 @@ class Order:
 
         subtotal = self._subtotal()
 
-        # Discount rules
         discount = self._calculate_discount(subtotal)
 
-        # Tax calculation
-        taxable_amount = subtotal - discount
-        tax = taxable_amount * 0.20
+        taxable_amount, tax = self._calculate_tax(subtotal, discount)
 
         # Total calculation
         total = taxable_amount + tax
@@ -69,5 +66,5 @@ class Order:
     def _calculate_tax(self, subtotal, discount):
         taxable_amount = subtotal - discount
         tax = taxable_amount * 0.20
-        return tax
+        return taxable_amount, tax
 
