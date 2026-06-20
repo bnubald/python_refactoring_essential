@@ -36,11 +36,7 @@ class Order:
         subtotal = self._subtotal()
 
         # Discount rules
-        discount = 0.0
-        if self.customer.is_loyal():
-            discount = subtotal * 0.10
-        elif subtotal > 100:
-            discount = subtotal * 0.05
+        discount = self._calculate_discount(subtotal)
 
         # Tax calculation
         taxable_amount = subtotal - discount
@@ -61,10 +57,12 @@ class Order:
         subtotal = sum(item.price * item.quantity for item in self.items)
         return subtotal
 
-    def _calculate_discount(self):
+    def _calculate_discount(self, subtotal):
         discount = 0.0
         if self.customer.is_loyal():
             discount = subtotal * 0.10
         elif subtotal > 100:
             discount = subtotal * 0.05
+
+        return discount
 
